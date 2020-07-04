@@ -54,11 +54,12 @@ public class Game extends Canvas implements Runnable{
             }
         }
     }
-
+//  this method is where we update all our game events, such as increasing a score, or changing or moving a variable around
     public void tick(){
 
     }
 
+//  this is where we draw all of our game's graphics
     public void render(){
         BufferStrategy bs = this.getBufferStrategy();
         if(bs == null){
@@ -69,6 +70,8 @@ public class Game extends Canvas implements Runnable{
 
         g.setColor(Color.green);
         g.fillRect(0,0, 640,480);
+        g.setColor(Color.yellow);
+        g.fillRect(0,240,640, 240);
 
         g.dispose();
         bs.show();
